@@ -92,16 +92,18 @@ class SingleLinkList:
         #插入节点
         if(index == 1):
             self.add_top(data)
-        elif(index == self.length()):
-            self.add_bottom(data)
+            return True
         elif(index <= 0 or index > self.length()):
             return False
         else:
             cur = self._head
             now_index = 1
-            while(cur.next != None):
-
+            while(now_index != (index - 1)):
+                #游标移到index的前一个节点
                 cur = cur.next
-
-
-        return
+                now_index += 1
+            tmp = cur.next
+            cur.next = Node(data)
+            cur.next.next = tmp
+        self._length += 1
+        return True
