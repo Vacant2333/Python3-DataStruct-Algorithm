@@ -107,3 +107,8 @@ class SingleLinkList:
             cur.next.next = tmp
         self._length += 1
         return True
+
+    def clear(self) -> bool:
+        self._head = None
+        self._length = 0
+        return True
