@@ -25,7 +25,7 @@ print("{}  length:{}".format(sll.items(), sll.length()))
 sll.remove(3)
 print("{}  length:{}".format(sll.items(), sll.length()))
 
-num = 20000
+num = 10000
 print("插入{}条数据性能对比(list)".format(num))
 start_time = int(round(time.time() * 1000))
 sll.add_top(6666)
