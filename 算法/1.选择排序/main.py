@@ -13,8 +13,9 @@ class SelectionSort:
                     smallest_key = key
         return smallest_key
 
-    def selection_sort(self, arr: list, sort: int = 1) -> list:
+    def selection_sort(self, ar: list, sort: int = 1) -> list:
         # 选择排序 sort :0升序 1降序
+        arr = ar[:]
         new_arr, key, smallest_key = [[], None, 0]
         for key in range(len(arr)):
             smallest_key = self.find_smallest_value(arr)
