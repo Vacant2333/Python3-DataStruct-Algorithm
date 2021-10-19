@@ -1,13 +1,13 @@
 import random
 import time
-from main import SelectionSort, SelectionSort2
-ss = SelectionSort()
-ss2 = SelectionSort2()
+import main
+ss = main.SelectionSort()
+ss2 = main.SelectionSort2()
 arr = []
 
 start_time = int(round(time.time() * 1000))
 
-for _ in range(10):
+for _ in range(1000):
     arr.append(random.randint(1, 100000))
 
 ss_result = ss.selection_sort(arr)

@@ -1,7 +1,7 @@
 import time
-from main import SingleLinkList
+import main
 
-sll = SingleLinkList()
+sll = main.SingleLinkList()
 
 sll.add_bottom(1)
 print("{}  length:{}".format(sll.items(), sll.length()))
