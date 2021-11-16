@@ -19,15 +19,17 @@ edges = [
     ('b', 'c', 4)
 ]
 
+# new a graph
 graph = nx.Graph()
-graph.add_nodes_from(nodes.keys())
+# add nodes and edges with weight
+graph.add_nodes_from(nodes)
 graph.add_weighted_edges_from(edges)
 
+pos = nx.spiral_layout(graph)
 edge_label = nx.get_edge_attributes(graph, 'weight')
-nx.draw_networkx_edge_labels(graph, nx.spiral_layout(graph), edge_labels=edge_label)
 
-
-nx.draw(graph, with_labels=True, node_color=nodes.values(), font_size=15, pos=nx.spiral_layout(graph))
+nx.draw_networkx_edge_labels(graph, pos, edge_labels=edge_label)
+nx.draw(graph, with_labels=True, node_color=nodes.values(), pos=pos)
 plt.show()
 
 
