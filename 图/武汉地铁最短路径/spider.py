@@ -1,9 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-
 # 爬取武汉所有地铁的线路信息
-
 def get_line_data():
     url = 'http://wh.bendibao.com/ditie/linemap.shtml'
     soup = BeautifulSoup(requests.get(url).text, 'html.parser')
