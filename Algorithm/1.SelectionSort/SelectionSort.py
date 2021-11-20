@@ -1,8 +1,6 @@
-class SelectionSort:
-    # 选择排序
-
+class SelectionSort1:
+    # Return the least key,if list is null then -1
     def find_smallest_value(self, arr: list) -> int:
-        # 返回最小值的索引 数组为空则返回-1
         smallest_key, key = [None, 0]
         for key in range(len(arr)):
             if arr[key] is not None:
@@ -13,8 +11,8 @@ class SelectionSort:
                     smallest_key = key
         return smallest_key
 
+    # Sort :0 ascending   1 descending
     def selection_sort(self, ar: list, sort: int = 1) -> list:
-        # 选择排序 sort :0升序 1降序
         arr = ar[:]
         new_arr, key, smallest_key = [[], None, 0]
         for key in range(len(arr)):
@@ -23,12 +21,11 @@ class SelectionSort:
             arr[smallest_key] = None
         return new_arr if sort == 0 else new_arr[::-1]
 
-# 优化后
-class SelectionSort2:
-    # 选择排序
 
+# Better than 1
+class SelectionSort2:
+    # Return the least key,if list is null then -1
     def find_smallest_value(self, arr: list) -> int:
-        # 返回最小值的索引 数组为空则返回-1
         min_value: int = 999999
         min_value_index: int = 0
         for index, value in enumerate(arr):
@@ -37,8 +34,8 @@ class SelectionSort2:
                 min_value = value
         return arr.pop(min_value_index)
 
+    # Sort :0 ascending   1 descending
     def selection_sort(self, ar: list, sort: int = 1) -> list:
-        # 选择排序 sort :0升序 1降序
         arr = ar[:]
         new_arr, key, smallest_key = [[], None, 0]
         for key in range(len(arr)):

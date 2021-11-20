@@ -1,8 +1,9 @@
 import random
 import time
-import main
-ss = main.SelectionSort()
-ss2 = main.SelectionSort2()
+import SelectionSort
+
+ss = SelectionSort.SelectionSort1()
+ss2 = SelectionSort.SelectionSort2()
 arr = []
 
 start_time = int(round(time.time() * 1000))
@@ -12,15 +13,15 @@ for _ in range(1000):
 
 ss_result = ss.selection_sort(arr)
 ss_time = int(round(time.time() * 1000))
-print("选择排序耗时:{}毫秒".format(ss_time - start_time))
+print("SelectionSort_1:{}ms".format(ss_time - start_time))
 
 py_result = sorted(arr, reverse=True)
 py_time = int(round(time.time() * 1000))
-print("py sorted排序耗时:{}毫秒".format(py_time - ss_time))
+print("Python sorted:{}ms".format(py_time - ss_time))
 
 ss2_result = ss2.selection_sort(arr)
 ss2_time = int(round(time.time() * 1000))
-print("选择排序2耗时:{}毫秒".format(ss2_time - py_time))
+print("SelectionSort_2:{}ms".format(ss2_time - py_time))
 
 print(py_result == ss_result)
 print(py_result == ss2_result)

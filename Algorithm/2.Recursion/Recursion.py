@@ -1,4 +1,3 @@
-# 计算阶乘
 def factorial(x):
     if x == 1:
         return x
@@ -12,6 +11,7 @@ def list_sum(nums: list):
     else:
         nums[0] += nums.pop(1)
         return list_sum(nums)
+
 
 def list_sum_2(nums: list):
     if len(nums) == 1:

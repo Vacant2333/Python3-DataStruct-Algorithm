@@ -1,38 +1,34 @@
 class Node:
-    #单链表的节点
+    # SingleLinkList's node
     def __init__(self, data):
-        #节点存放的数据
+        # Data
         self.data = data
-        #下一个节点
+        # Next node(node)
         self.next = None
 
 
 class SingleLinkList:
-    #单链表
     def __init__(self):
-        #初始化
         self._head = None
         self._length = 0
 
     def is_empty(self) -> bool:
-        #判断链表是否为空
-        return False if (self.length()) else True
+        # Check list is empty
+        return False if self._length else True
 
     def length(self) -> int:
-        #获取链表长度
         return self._length
 
     def items(self) -> list:
-        #获得链表所有数据
+        # Get all node's data
         re = []
         cur = self._head
-        while(cur != None):
+        while cur is not None:
             re.append(cur.data)
             cur = cur.next
         return re
 
     def add_top(self, data) -> bool:
-        #向链表头部添加节点
         tmp = self._head
         self._head = Node(data)
         self._head.next = tmp
@@ -40,38 +36,33 @@ class SingleLinkList:
         return True
 
     def add_bottom(self, data) -> bool:
-        #向链表尾部添加节点
         cur = self._head
-        if(self.length() == 0):
-            #判断是否是空链表
+        if self.is_empty():
             self._head = Node(data)
         else:
-            while(cur.next != None):
+            while cur.next is not None:
                 cur = cur.next
             cur.next = Node(data)
         self._length += 1
         return True
 
     def remove(self, data) -> bool:
-        #删除节点
-        if(self.length() <= 1):
-            #判断链表长度
-            if(self.length() == 0):
-                #判断是否是空链表
+        if self._length <= 1:
+            if self.is_empty():
                 return False
             else:
-                if(self._head.data == data):
-                    #判断唯一元素是否是data
-                    self.head = None
+                if self._head.data == data:
+                    # Remove the data of head
+                    self._head = None
                 else:
                     return False
         else:
             cur = self._head
+            # The last node
             last_cur = None
-            #last_cur存放上一个节点
-            while(cur.data != data):
-                #游标移到需要删除的节点
-                if(cur.next == None):
+            while cur.data != data:
+                # Move cursor to the node which should be removed
+                if cur.next is None:
                     return False
                 last_cur = cur
                 cur = cur.next
@@ -80,26 +71,25 @@ class SingleLinkList:
         return True
 
     def find(self, data) -> bool:
-        #判断节点是否存在
+        # Find a node
         cur = self._head
-        while(cur != None):
-            if(cur.data == data):
+        while cur is not None:
+            if cur.data == data:
                 return True
             cur = cur.next
         return False
 
     def insert(self, index, data) -> bool:
-        #插入节点
-        if(index == 1):
+        if index == 1:
             self.add_top(data)
             return True
-        elif(index <= 0 or index > self.length()):
+        elif index <= 0 or index > self.length():
             return False
         else:
             cur = self._head
             now_index = 1
-            while(now_index != (index - 1)):
-                #游标移到index的前一个节点
+            while int(now_index) != (index - 1):
+                # Move cursor to the last of index
                 cur = cur.next
                 now_index += 1
             tmp = cur.next

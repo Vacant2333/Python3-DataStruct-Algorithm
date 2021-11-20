@@ -1,11 +1,11 @@
-#Python3 数据结构与算法 学习
+#Python3 DataStruct & Algorithm
 <pre>
-<b>数据结构:</b>
-    1.单链表
+<b>DataStruct:</b>
+    1.SingleLinkedList
 </pre>
-<hr>
 <pre>
-<b>算法:</b>
-    1.选择排序
-    2.递归
+<b>Algorithm:</b>
+    1.SelectionSort
+    2.Recursion
+    3.QuickSort
 </pre>
