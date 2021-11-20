@@ -7,7 +7,7 @@ class Node:
         self.next = None
 
 
-class SingleLinkList:
+class SingleLinkedList:
     def __init__(self):
         self._head = None
         self._length = 0
@@ -47,26 +47,30 @@ class SingleLinkList:
         return True
 
     def remove(self, data) -> bool:
-        if self._length <= 1:
-            if self.is_empty():
-                return False
+        if self.is_empty():
+            return False
+        if self.length() == 1:
+            # There is only the head node
+            if self._head.data == data:
+                # Remove the data of head
+                self._head = None
             else:
-                if self._head.data == data:
-                    # Remove the data of head
-                    self._head = None
-                else:
-                    return False
+                return False
         else:
-            cur = self._head
-            # The last node
-            last_cur = None
-            while cur.data != data:
-                # Move cursor to the node which should be removed
-                if cur.next is None:
-                    return False
-                last_cur = cur
-                cur = cur.next
-            last_cur.next = cur.next
+            # There is multiple node
+            if self._head.data == data:
+                self._head = self._head.next
+            else:
+                cur = self._head
+                # The last node
+                last_cur = None
+                while cur.data != data:
+                    # Move cursor to the node which should be removed
+                    if cur.next is None:
+                        return False
+                    last_cur = cur
+                    cur = cur.next
+                last_cur.next = cur.next
         self._length -= 1
         return True
 
@@ -79,6 +83,7 @@ class SingleLinkList:
             cur = cur.next
         return False
 
+    # Index start from 1 but 0
     def insert(self, index, data) -> bool:
         if index == 1:
             self.add_top(data)
@@ -98,7 +103,6 @@ class SingleLinkList:
         self._length += 1
         return True
 
-    def clear(self) -> bool:
+    def clear(self) -> None:
         self._head = None
         self._length = 0
-        return True
