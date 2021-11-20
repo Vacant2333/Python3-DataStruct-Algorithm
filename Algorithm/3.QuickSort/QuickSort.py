@@ -1,4 +1,4 @@
-class QuickSort:
+class QuickSortLomuto:
     # QuickSort(Lomuto version)
     def quick_sort(self, big_list: list[int]) -> list:
         if len(big_list) <= 1:

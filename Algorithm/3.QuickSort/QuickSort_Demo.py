@@ -6,7 +6,7 @@ arr = []
 for _ in range(100000):
     arr.append(random.randint(1, 10000))
 
-qs = QuickSort.QuickSort()
+qs = QuickSort.QuickSortLomuto()
 
 start_time = int(round(time.time() * 1000))
 quick_sort_result = qs.quick_sort(arr)
