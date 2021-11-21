@@ -1,4 +1,3 @@
-#Python3 DataStruct & Algorithm
 <pre>
 <b>DataStruct:</b>
     1.SingleLinkedList
@@ -14,5 +13,5 @@
     Algorithm:
         1.BreadthFirstSearch
     DataStruct:
-        1.UndirectedGraph
+        UndirectedGraph
 </pre>

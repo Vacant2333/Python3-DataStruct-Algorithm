@@ -10,7 +10,7 @@ class UndirectedGraph:
     def get_edges(self):
         return self.edges
 
-    def insert_node(self, node: str or list):
+    def add_node(self, node: str or list):
         if isinstance(node, str):
             # Node type is str
             self.check_node(node)
@@ -24,7 +24,7 @@ class UndirectedGraph:
             # Node type is not str or list
             raise ValueError("Node must be str or list[str]! node:" + str(node))
 
-    def insert_edge(self, edge: list):
+    def add_edge(self, edge: list):
         if isinstance(edge, list):
             if isinstance(edge[0], list):
                 # Multiple edge
@@ -34,6 +34,7 @@ class UndirectedGraph:
             else:
                 # Single edge
                 self.check_edge(edge)
+                self.edges.append(edge)
         else:
             raise ValueError("Edge must be list! edge:" + str(edge))
 
@@ -58,4 +59,9 @@ class UndirectedGraph:
         # Check Node Value
         self.check_node(edge[0], False)
         self.check_node(edge[1], False)
-        # Check node is in nodes
+        # Check node if in nodes
+        if edge[0] not in self.nodes or edge[1] not in self.nodes:
+            raise ValueError("Edge node error! node:" + str(edge))
+        # Check edge if duplication
+        if edge in self.edges or edge[::-1] in self.edges:
+            raise ValueError("Edge duplication! edge" + str(edge))
