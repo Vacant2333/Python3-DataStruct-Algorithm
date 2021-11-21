@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def get_line_data():
+def get_line_data() -> dict:
     url = 'http://wh.bendibao.com/ditie/linemap.shtml'
     soup = BeautifulSoup(requests.get(url).text, 'html.parser')
     # Metro line data

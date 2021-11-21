@@ -1,16 +1,16 @@
 class QuickSortLomuto:
     # QuickSort(Lomuto version)
-    def quick_sort(self, big_list: list[int]) -> list:
-        if len(big_list) <= 1:
-            return big_list
+    def quick_sort(self, in_list: list[int]) -> list:
+        if len(in_list) <= 1:
+            return in_list
         else:
-            partition_result = self.partition(big_list)
+            partition_result = self.partition(in_list)
             # print(partition_result)
             return self.quick_sort(partition_result['left']) + [partition_result['pivot']] + self.quick_sort(partition_result['right'])
 
     # Divide list and return pivot
-    def partition(self, big_list: list[int]) -> dict:
-        plist = big_list.copy()
+    def partition(self, in_list: list[int]) -> dict:
+        plist = in_list[:]
         left = []
         right = []
         pivot = plist.pop(0)

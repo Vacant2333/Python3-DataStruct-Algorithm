@@ -4,10 +4,10 @@ class UndirectedGraph:
     # Edge [[node_1, node_2]]
     edges = []
 
-    def get_nodes(self):
+    def get_nodes(self) -> list:
         return self.nodes
 
-    def get_edges(self):
+    def get_edges(self) -> list:
         return self.edges
 
     def add_node(self, node: str or list):
