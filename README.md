@@ -1,17 +1,26 @@
+<div style="font-size: 18px;">
+<h2>Direction Structure:</h2>
+
 <pre>
-<b>DataStruct:</b>
-    1.SingleLinkedList
+<b>Sorting:</b>
+    Algorithm:
+        SelectionSort
+        QuickSort
+    DataStruct:
+        SingleLinkedList
 </pre>
-<pre>
-<b>Algorithm:</b>
-    1.SelectionSort
-    2.Recursion
-    3.QuickSort
-</pre>
+
 <pre>
 <b>Graph:</b>
     Algorithm:
-        1.BreadthFirstSearch
+        BreadthFirstSearch
     DataStruct:
         UndirectedGraph
 </pre>
+
+<pre>
+<b>Project:</b>
+    1.WuhanMetroRouteFinding
+</pre>
+
+</div>

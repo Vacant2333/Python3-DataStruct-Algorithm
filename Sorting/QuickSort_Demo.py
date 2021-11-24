@@ -1,6 +1,6 @@
 import random
 import time
-import QuickSort
+from Sorting.Algorithm import QuickSort
 
 arr = []
 for _ in range(100000):

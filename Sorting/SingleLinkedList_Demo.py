@@ -1,5 +1,5 @@
 import time
-import SingleLinkedList
+from DataStruct import SingleLinkedList
 
 sll = SingleLinkedList.SingleLinkedList()
 

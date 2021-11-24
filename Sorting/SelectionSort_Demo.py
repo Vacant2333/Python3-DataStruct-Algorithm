@@ -1,6 +1,6 @@
 import random
 import time
-import SelectionSort
+from Sorting.Algorithm import SelectionSort
 
 ss = SelectionSort.SelectionSort1()
 ss2 = SelectionSort.SelectionSort2()
