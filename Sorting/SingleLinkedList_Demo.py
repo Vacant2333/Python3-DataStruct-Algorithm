@@ -3,6 +3,7 @@ from DataStruct import SingleLinkedList
 
 sll = SingleLinkedList.SingleLinkedList()
 
+# Check SingleLinkedList methods
 sll.add_bottom(1)
 print("{}  length:{}".format(sll.items(), sll.length()))
 sll.add_bottom(2)
@@ -27,7 +28,8 @@ print("{}  length:{}".format(sll.items(), sll.length()))
 
 num = 10000
 
-print("insert {} data in list and SingleLinkedList".format(num))
+# Insert speed test
+print("Insert {} data in list and SingleLinkedList".format(num))
 start_time = int(round(time.time() * 1000))
 
 for x in range(num):
