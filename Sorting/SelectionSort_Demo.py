@@ -11,12 +11,12 @@ for _ in range(10000):
 start_time = int(round(time.time() * 1000))
 
 # SelectionSort version 1
-ss1_result = SelectionSort.SelectionSort1().selection_sort(arr)
+ss1_result = SelectionSort.SelectionSort1().run(arr)
 ss1_time = int(round(time.time() * 1000))
 print("SelectionSort_1:{}ms".format(ss1_time - start_time))
 
 # SelectionSort version 2
-ss2_result = SelectionSort.SelectionSort2().selection_sort(arr)
+ss2_result = SelectionSort.SelectionSort2().run(arr)
 ss2_time = int(round(time.time() * 1000))
 print("SelectionSort_2:{}ms".format(ss2_time - ss1_time))
 

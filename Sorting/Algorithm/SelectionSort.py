@@ -12,7 +12,7 @@ class SelectionSort1:
         return smallest_key
 
     # Sort: 0 ascending 1 descending
-    def selection_sort(self, ar: list, sort: int = 1) -> list:
+    def run(self, ar: list, sort: int = 1) -> list:
         arr = ar[:]
         new_arr, key, smallest_key = [[], None, 0]
         for key in range(len(arr)):
@@ -35,7 +35,7 @@ class SelectionSort2:
         return arr.pop(min_value_index)
 
     # Sort: 0 ascending 1 descending
-    def selection_sort(self, ar: list, sort: int = 1) -> list:
+    def run(self, ar: list, sort: int = 1) -> list:
         arr = ar[:]
         new_arr, key, smallest_key = [[], None, 0]
         for key in range(len(arr)):
