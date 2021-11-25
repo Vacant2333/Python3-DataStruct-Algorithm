@@ -1,6 +1,7 @@
 from Graph.DataStruct.UndirectedGraph import UndirectedGraph
 
 
+# Version 1,mere search the route if can arrive the end node
 class BreadthFirstSearch1:
     def __init__(self):
         self.nodes = []
@@ -32,7 +33,7 @@ class BreadthFirstSearch1:
         return False
 
 
-# Return with the shortest route
+# Version 2,return with the shortest route if can arrive the end node
 class BreadthFirstSearch2:
     def __init__(self):
         self.nodes = []

@@ -24,7 +24,7 @@
 </pre>
 
 
-# Graph Demo Image:
-<b>BreadthFirstSearch(UndirectedGraph):</b><br><br>
+# Graph Image:
+<b>BreadthFirstSearch demo image:</b><br><br>
 <img src="https://vacant-github.oss-cn-beijing.aliyuncs.com/Python3-DataStruct-Algorithm/Graph/UndirectedGraph.png" alt="">
 </div>
