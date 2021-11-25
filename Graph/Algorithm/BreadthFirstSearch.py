@@ -1,3 +1,6 @@
+from Graph.DataStruct.UndirectedGraph import UndirectedGraph
+
+
 class BreadthFirstSearch1:
     def __init__(self):
         self.nodes = []
@@ -5,27 +8,20 @@ class BreadthFirstSearch1:
         self.check_list = []
         self.checked_node = []
 
-    def get_node_neighbor(self, node: str) -> list:
-        neighbor = []
-        for edge in self.edges:
-            if node in edge:
-                neighbor.append(edge[1] if edge.index(node) == 0 else edge[0])
-        return neighbor
-
     def filter_checked_node(self, nodes: list) -> list:
         for checked_node in self.checked_node:
             if checked_node in nodes:
                 nodes.remove(checked_node)
         return nodes
 
-    def run(self, nodes: list, edges: list, start: str, end: str) -> bool:
-        self.nodes = nodes
-        self.edges = edges
+    def run(self, graph: UndirectedGraph, start: str, end: str) -> bool:
+        self.nodes = graph.get_nodes()
+        self.edges = graph.get_edges()
         self.check_list = [start]
         for check_node in self.check_list:
             if check_node != end:
                 # Get Node neighbor and filter node which had checked
-                node_neighbor = self.filter_checked_node(self.get_node_neighbor(check_node))
+                node_neighbor = self.filter_checked_node(graph.get_node_neighbor(check_node))
                 # Add neighbor node to check_list to search all node
                 self.check_list += node_neighbor
                 self.checked_node.append(check_node)
@@ -47,13 +43,6 @@ class BreadthFirstSearch2:
         self.nodes_father = {}
         # Start cost 0, each step cost 1
         self.node_cost = {}
-
-    def get_node_neighbor(self, node: str) -> list:
-        neighbor = []
-        for edge in self.edges:
-            if node in edge:
-                neighbor.append(edge[1] if edge.index(node) == 0 else edge[0])
-        return neighbor
 
     def filter_checked_node(self, nodes: list) -> list:
         for checked_node in self.checked_node:
@@ -89,19 +78,19 @@ class BreadthFirstSearch2:
             self.node_cost[son_node] = self.get_node_cost(father_node) + 1
             self.nodes_father[son_node] = father_node
 
-    def run(self, nodes: list, edges: list, start: str, end: str) -> bool or list:
-        self.nodes = nodes
-        self.edges = edges
+    def run(self, graph: UndirectedGraph, start: str, end: str) -> bool or list:
+        self.nodes = graph.get_nodes()
+        self.edges = graph.get_edges()
         self.check_list = [start]
         self.node_cost[start] = 0
         for check_node in self.check_list:
             if check_node != end:
                 # Get Node neighbor and filter node which had checked
-                node_neighbor = self.filter_checked_node(self.get_node_neighbor(check_node))
-                for neighbor_node in node_neighbor:
-                    self.save_father_node(check_node, neighbor_node)
+                check_node_neighbor = self.filter_checked_node(graph.get_node_neighbor(check_node))
+                for neighbor in check_node_neighbor:
+                    self.save_father_node(check_node, neighbor)
                 # Add neighbor node to check_list to search all node
-                self.check_list += node_neighbor
+                self.check_list += check_node_neighbor
                 self.checked_node.append(check_node)
             else:
                 # Its end node and reverse the route

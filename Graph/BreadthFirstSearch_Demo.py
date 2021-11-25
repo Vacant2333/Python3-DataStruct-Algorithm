@@ -11,10 +11,9 @@ graph.add_node(nodes)
 graph.add_edge(edges)
 
 # Version 1
-print(BreadthFirstSearch.BreadthFirstSearch1().run(graph.get_nodes(), graph.get_edges(), '0', '3'))
-print(BreadthFirstSearch.BreadthFirstSearch1().run(graph.get_nodes(), graph.get_edges(), '0', '8'))
-print(BreadthFirstSearch.BreadthFirstSearch1().run(graph.get_nodes(), graph.get_edges(), '10', '12'))
+print(BreadthFirstSearch.BreadthFirstSearch1().run(graph, '0', '3'))
+print(BreadthFirstSearch.BreadthFirstSearch1().run(graph, '0', '8'))
 
 # Version 2,return with the shortest route
-print(BreadthFirstSearch.BreadthFirstSearch2().run(graph.get_nodes(), graph.get_edges(), '10', '12'))
-print(BreadthFirstSearch.BreadthFirstSearch2().run(graph.get_nodes(), graph.get_edges(), '0', '7'))
+print(BreadthFirstSearch.BreadthFirstSearch2().run(graph, '10', '12'))
+print(BreadthFirstSearch.BreadthFirstSearch2().run(graph, '0', '7'))

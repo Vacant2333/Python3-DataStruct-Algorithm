@@ -13,7 +13,7 @@
 <pre>
 <b>Graph:</b>
     Algorithm:
-        BreadthFirstSearch
+        BreadthFirstSearch(For UndirectedGraph)
     DataStruct:
         UndirectedGraph
 </pre>

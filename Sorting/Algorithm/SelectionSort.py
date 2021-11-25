@@ -1,6 +1,6 @@
 class SelectionSort1:
     # Return the least key,if list is null then -1
-    def find_smallest_value(self, arr: list) -> int:
+    def get_smallest_value(self, arr: list) -> int:
         smallest_key, key = [None, 0]
         for key in range(len(arr)):
             if arr[key] is not None:
@@ -16,7 +16,7 @@ class SelectionSort1:
         arr = ar[:]
         new_arr, key, smallest_key = [[], None, 0]
         for key in range(len(arr)):
-            smallest_key = self.find_smallest_value(arr)
+            smallest_key = self.get_smallest_value(arr)
             new_arr.append(arr[smallest_key])
             arr[smallest_key] = None
         return new_arr if sort == 0 else new_arr[::-1]
@@ -25,7 +25,7 @@ class SelectionSort1:
 # Better than 1
 class SelectionSort2:
     # Return the least key,if list is null then -1
-    def find_smallest_value(self, arr: list) -> int:
+    def get_smallest_value(self, arr: list) -> int:
         min_value = float('inf')
         min_value_index = 0
         for index, value in enumerate(arr):
@@ -39,5 +39,5 @@ class SelectionSort2:
         arr = ar[:]
         new_arr, key, smallest_key = [[], None, 0]
         for key in range(len(arr)):
-            new_arr.append(self.find_smallest_value(arr))
+            new_arr.append(self.get_smallest_value(arr))
         return new_arr if sort == 0 else new_arr[::-1]

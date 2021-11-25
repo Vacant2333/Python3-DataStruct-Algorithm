@@ -7,6 +7,13 @@ class UndirectedGraph:
     def get_nodes(self) -> list:
         return self.nodes
 
+    def get_node_neighbor(self, node: str) -> list:
+        neighbor = []
+        for edge in self.edges:
+            if node in edge:
+                neighbor.append(edge[1] if edge.index(node) == 0 else edge[0])
+        return neighbor
+
     def get_edges(self) -> list:
         return self.edges
 
