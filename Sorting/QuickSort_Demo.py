@@ -1,18 +1,9 @@
-import random
-import time
-from Algorithm import QuickSort
+from Algorithm.QuickSort import QuickSortLomuto
 
-arr = []
+arr = [1, 99, 43, 26, 84, 29, 10, 24, 10, 23, 55]
 
-for _ in range(10000):
-    arr.append(random.randint(1, 100000))
+quick_sort_result = QuickSortLomuto().run(arr)
+print("QuickSort result:{}".format(quick_sort_result))
 
-start_time1 = int(round(time.time() * 1000))
-quick_sort_result = QuickSort.QuickSortLomuto().run(arr)
-print("QuickSort: {}ms".format(int(round(time.time() * 1000)) - start_time1))
-
-start_time2 = int(round(time.time() * 1000))
-arr.sort()
-print("Python sort: {}ms".format(int(round(time.time() * 1000)) - start_time2))
-
-print("Result check:{}".format(arr == quick_sort_result))
+sorted_result = sorted(arr)
+print("Sorted result:{}".format(sorted_result))

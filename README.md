@@ -13,7 +13,8 @@
 <pre>
 <b>Graph:</b>
     Algorithm:
-        BreadthFirstSearch(For UndirectedGraph)
+        BreadthFirstSearch
+        DepthFirstSearch
     DataStruct:
         UndirectedGraph
 </pre>
@@ -26,5 +27,8 @@
 
 # Graph Image:
 <b>BreadthFirstSearch demo image:</b><br><br>
-<img src="https://vacant-github.oss-cn-beijing.aliyuncs.com/Python3-DataStruct-Algorithm/Graph/UndirectedGraph.png" alt="">
+<img src="https://vacant-github.oss-cn-beijing.aliyuncs.com/Python3-DataStruct-Algorithm/Graph/BreadthFirstSearch_Demo.png" alt="error :(">
+<br><br><br>
+<b>DepthFirstSearch demo image:</b><br><br>
+<img src="https://vacant-github.oss-cn-beijing.aliyuncs.com/Python3-DataStruct-Algorithm/Graph/DepthFirstSearch_Demo.webp" alt="error :(">
 </div>

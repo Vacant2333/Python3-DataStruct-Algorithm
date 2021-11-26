@@ -1,6 +1,6 @@
 class Node(object):
     # SingleLinkList's node
-    def __init__(self, data= None, next_node=None):
+    def __init__(self, data=None, next_node=None):
         # Data
         self.data = data
         # Next node(node)
@@ -30,8 +30,7 @@ class SingleLinkedList:
 
     def add_top(self, data) -> bool:
         tmp = self.__head
-        self.__head = Node(data)
-        self.__head.next = tmp
+        self.__head = Node(data, tmp)
         self.__length += 1
         return True
 
@@ -98,8 +97,7 @@ class SingleLinkedList:
                 cur = cur.next
                 now_index += 1
             tmp = cur.next
-            cur.next = Node(data)
-            cur.next.next = tmp
+            cur.next = Node(data, tmp)
         self.__length += 1
         return True
 

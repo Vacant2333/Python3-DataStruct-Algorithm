@@ -6,7 +6,7 @@ class BreadthFirstSearch1:
     def __init__(self):
         self.nodes = []
         self.edges = []
-        self.check_list = []
+        self.check_queue = []
         self.checked_node = []
 
     def filter_checked_node(self, nodes: list[str]) -> list[str]:
@@ -18,16 +18,19 @@ class BreadthFirstSearch1:
     def run(self, graph: UndirectedGraph, start: str, end: str) -> bool:
         self.nodes = graph.get_nodes()
         self.edges = graph.get_edges()
-        self.check_list = [start]
-        for check_node in self.check_list:
+        self.check_queue = [start]
+        for check_node in self.check_queue:
             if check_node != end:
                 # Get Node neighbor and filter node which had checked
-                node_neighbor = self.filter_checked_node(graph.get_node_neighbor(check_node))
-                # Add neighbor node to check_list to search all node
-                self.check_list += node_neighbor
+                check_node_neighbor = self.filter_checked_node(graph.get_node_neighbor(check_node))
+                for neighbor in check_node_neighbor:
+                    self.checked_node.append(neighbor)
+                # Add neighbor node to check_queue to search all node
+                self.check_queue += check_node_neighbor
                 self.checked_node.append(check_node)
             else:
                 # Its end node
+                # print(self.check_queue)
                 return True
         # Cant find end node
         return False
@@ -38,7 +41,7 @@ class BreadthFirstSearch2:
     def __init__(self):
         self.nodes = []
         self.edges = []
-        self.check_list = []
+        self.check_queue = []
         self.checked_node = []
         # Structure: nodes_father[son_node] = father_node
         self.nodes_father = {}
@@ -82,19 +85,21 @@ class BreadthFirstSearch2:
     def run(self, graph: UndirectedGraph, start: str, end: str) -> bool or list[str]:
         self.nodes = graph.get_nodes()
         self.edges = graph.get_edges()
-        self.check_list = [start]
+        self.check_queue = [start]
         self.node_cost[start] = 0
-        for check_node in self.check_list:
+        for check_node in self.check_queue:
             if check_node != end:
                 # Get Node neighbor and filter node which had checked
                 check_node_neighbor = self.filter_checked_node(graph.get_node_neighbor(check_node))
                 for neighbor in check_node_neighbor:
                     self.save_father_node(check_node, neighbor)
-                # Add neighbor node to check_list to search all node
-                self.check_list += check_node_neighbor
+                    self.checked_node.append(neighbor)
+                # Add neighbor node to check_queue to search all node
+                self.check_queue += check_node_neighbor
                 self.checked_node.append(check_node)
             else:
                 # Its end node and reverse the route
+                # print(self.check_queue)
                 return self.get_node_route(end)[::-1]
         # Cant find end node
         return False

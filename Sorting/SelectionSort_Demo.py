@@ -1,29 +1,12 @@
-import random
-import time
-from Algorithm import SelectionSort
+from Algorithm.SelectionSort import SelectionSort1, SelectionSort2
 
-arr = []
+arr = [121, 15, 42, 17, 19, 122, 55, 30, 12, 55, 21]
 
-for _ in range(10000):
-    arr.append(random.randint(1, 100000))
+ss1_result = SelectionSort1().run(arr)
+print("SS1 result:{}".format(ss1_result))
 
-# Start speed test
-start_time = int(round(time.time() * 1000))
+ss2_result = SelectionSort2().run(arr)
+print("SS2 result:{}".format(ss2_result))
 
-# SelectionSort version 1
-ss1_result = SelectionSort.SelectionSort1().run(arr)
-ss1_time = int(round(time.time() * 1000))
-print("SelectionSort_1:{}ms".format(ss1_time - start_time))
-
-# SelectionSort version 2
-ss2_result = SelectionSort.SelectionSort2().run(arr)
-ss2_time = int(round(time.time() * 1000))
-print("SelectionSort_2:{}ms".format(ss2_time - ss1_time))
-
-py_result = sorted(arr, reverse=True)
-py_time = int(round(time.time() * 1000))
-print("Python sorted:{}ms".format(py_time - ss2_time))
-
-# Check result
-print("Result check 1:{}".format(py_result == ss1_result))
-print("Result check 2:{}".format(py_result == ss2_result))
+sorted_result = sorted(arr)
+print("Sorted result:{}".format(sorted_result))
