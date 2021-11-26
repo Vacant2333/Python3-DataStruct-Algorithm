@@ -4,20 +4,20 @@ class UndirectedGraph:
     # Edge [[node_1, node_2]]
     edges = []
 
-    def get_nodes(self) -> list:
+    def get_nodes(self) -> list[int]:
         return self.nodes
 
-    def get_node_neighbor(self, node: str) -> list:
+    def get_node_neighbor(self, node: str) -> list[str]:
         neighbor = []
         for edge in self.edges:
             if node in edge:
                 neighbor.append(edge[1] if edge.index(node) == 0 else edge[0])
         return neighbor
 
-    def get_edges(self) -> list:
+    def get_edges(self) -> list[list[str, str]]:
         return self.edges
 
-    def add_node(self, node: str or list):
+    def add_node(self, node: str or list[str]) -> None:
         if isinstance(node, str):
             # Node type is str
             self.check_node(node)
@@ -31,7 +31,7 @@ class UndirectedGraph:
             # Node type is not str or list
             raise ValueError("Node must be str or list[str]! node:" + str(node))
 
-    def add_edge(self, edge: list):
+    def add_edge(self, edge: list[str, str] or list[list[str, str]]) -> None:
         if isinstance(edge, list):
             if isinstance(edge[0], list):
                 # Multiple edge
@@ -45,7 +45,7 @@ class UndirectedGraph:
         else:
             raise ValueError("Edge must be list! edge:" + str(edge))
 
-    def check_node(self, node: str, check_repeat=True):
+    def check_node(self, node: str, check_repeat: bool = True) -> None:
         # Check type
         if not isinstance(node, str):
             raise ValueError("Node must be str! node:" + str(node))
@@ -56,7 +56,7 @@ class UndirectedGraph:
         if check_repeat and node in self.nodes:
             raise ValueError("Node duplication! node:" + node)
 
-    def check_edge(self, edge: list):
+    def check_edge(self, edge: list[str]) -> None:
         # Check type
         if not isinstance(edge, list):
             raise ValueError("Edge must be list! edge:" + str(edge))

@@ -9,7 +9,7 @@ class BreadthFirstSearch1:
         self.check_list = []
         self.checked_node = []
 
-    def filter_checked_node(self, nodes: list) -> list:
+    def filter_checked_node(self, nodes: list[str]) -> list[str]:
         for checked_node in self.checked_node:
             if checked_node in nodes:
                 nodes.remove(checked_node)
@@ -45,13 +45,13 @@ class BreadthFirstSearch2:
         # Start cost 0, each step cost 1
         self.node_cost = {}
 
-    def filter_checked_node(self, nodes: list) -> list:
+    def filter_checked_node(self, nodes: list[str]) -> list[str]:
         for checked_node in self.checked_node:
             if checked_node in nodes:
                 nodes.remove(checked_node)
         return nodes
 
-    def get_node_route(self, node: str) -> list:
+    def get_node_route(self, node: str) -> list[str]:
         route = [node]
         while True:
             last_node = route[-1]
@@ -79,7 +79,7 @@ class BreadthFirstSearch2:
             self.node_cost[son_node] = self.get_node_cost(father_node) + 1
             self.nodes_father[son_node] = father_node
 
-    def run(self, graph: UndirectedGraph, start: str, end: str) -> bool or list:
+    def run(self, graph: UndirectedGraph, start: str, end: str) -> bool or list[str]:
         self.nodes = graph.get_nodes()
         self.edges = graph.get_edges()
         self.check_list = [start]
