@@ -8,20 +8,23 @@
         QuickSort
     DataStruct:
         SingleLinkedList
+        Queue ~
 </pre>
 
 <pre>
 <b>Graph:</b>
     Algorithm:
-        BreadthFirstSearch
-        DepthFirstSearch
+        BreadthFirstSearch (For UndirectedGraph)
+        DepthFirstSearch (For UndirectedGraph)
+        Dijkstra (For UndirectedWeightedGraph) ~
     DataStruct:
         UndirectedGraph
+        UndirectedWeightedGraph ~
 </pre>
 
 <pre>
 <b>Project:</b>
-    1.WuhanMetroRouteFinding
+    1.WuhanMetroRouteFinding ~
 </pre>
 
 

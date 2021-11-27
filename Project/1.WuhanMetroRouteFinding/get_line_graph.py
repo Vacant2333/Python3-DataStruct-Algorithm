@@ -1,8 +1,8 @@
-import Spider
+import line_data_spider
 import networkx as nx
 import matplotlib.pyplot as plt
 
-line_data = Spider.get_line_data()
+line_data = line_data_spider.get_line_data()
 nodes = {}
 edges = {}
 # Last station

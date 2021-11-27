@@ -1,22 +1,7 @@
-class UndirectedGraph:
-    # Node [str]
-    nodes = []
-    # Edge [[node_1, node_2]]
-    edges = []
+from Graph.DataStruct.GraphBase import GraphBase
 
-    def get_nodes(self) -> list[int]:
-        return self.nodes
 
-    def get_node_neighbor(self, node: str) -> list[str]:
-        neighbor = []
-        for edge in self.edges:
-            if node in edge:
-                neighbor.append(edge[1] if edge.index(node) == 0 else edge[0])
-        return neighbor
-
-    def get_edges(self) -> list[list[str, str]]:
-        return self.edges
-
+class UndirectedGraph(GraphBase):
     def add_node(self, node: str or list[str]) -> None:
         if isinstance(node, str):
             # Node type is str
