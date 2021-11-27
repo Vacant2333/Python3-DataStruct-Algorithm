@@ -17,9 +17,14 @@ for line in line_data.values():
         last_station_name = station
     last_station_name = ''
 
-print(nodes)
-print(edges)
+# Remove duplicate
+nodes = list(set(nodes))
+# Dirty data
+edges.remove(['中南路', '洪山广场'])
 
 graph = UndirectedGraph()
 graph.add_node(nodes)
 graph.add_edge(edges)
+
+print(BreadthFirstSearch2().run(graph, '天河机场', '佛祖岭'))
+print(BreadthFirstSearch2().run(graph, '石桥', '中山公园'))

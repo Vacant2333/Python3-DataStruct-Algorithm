@@ -97,6 +97,7 @@ class BreadthFirstSearch2:
                 # Add neighbor node to check_queue to search all node
                 self.check_queue += check_node_neighbor
                 self.checked_node.append(check_node)
+                # print(check_node)
             else:
                 # Its end node and reverse the route
                 # print(self.check_queue)
