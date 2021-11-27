@@ -26,5 +26,6 @@ graph = UndirectedGraph()
 graph.add_node(nodes)
 graph.add_edge(edges)
 
+# Get route
 print(BreadthFirstSearch2().run(graph, '天河机场', '佛祖岭'))
 print(BreadthFirstSearch2().run(graph, '石桥', '中山公园'))

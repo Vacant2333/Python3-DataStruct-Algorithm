@@ -11,6 +11,7 @@ def get_line_data() -> dict:
         # Heading div
         heading_div = line_div.findChildren(class_="line-list-heading")
         wrap_div = heading_div[0].findChildren(class_="wrap")
+        # Divide station name
         line_name = wrap_div[0].strong.a.contents[0][2:-3]
         all_station_div = line_div.findChildren(class_="line-list-station")[0].findChildren(class_="station")
         # Init the line
