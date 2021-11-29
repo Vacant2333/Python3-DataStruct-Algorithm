@@ -24,7 +24,7 @@
 
 <pre>
 <b>Project:</b>
-    1.WuhanMetroRouteFinding ~
+    1.WuhanMetroRouteFinding
 </pre>
 
 
