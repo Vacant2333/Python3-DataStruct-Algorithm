@@ -6,9 +6,10 @@
     Algorithm:
         SelectionSort
         QuickSort
+        BubbleSort ~~
     DataStruct:
         SingleLinkedList
-        Queue ~
+        Queue ~~
 </pre>
 
 <pre>
@@ -16,10 +17,10 @@
     Algorithm:
         BreadthFirstSearch (For UndirectedGraph)
         DepthFirstSearch (For UndirectedGraph)
-        Dijkstra (For UndirectedWeightedGraph) ~
+        Dijkstra (For UndirectedWeightedGraph) ~~
     DataStruct:
         UndirectedGraph
-        UndirectedWeightedGraph ~
+        UndirectedWeightedGraph ~~
 </pre>
 
 <pre>

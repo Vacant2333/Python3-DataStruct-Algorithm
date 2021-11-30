@@ -11,9 +11,14 @@ class GraphBase:
     def get_edges(self) -> list[list[str, str]] or list[list[str, str, int]]:
         return self.edges
 
-    def get_node_neighbor(self, node: str) -> list[str]:
+    def get_node_neighbor(self, node: str, directed: bool = False) -> list[str]:
         neighbor = []
-        for edge in self.edges:
-            if node in edge:
-                neighbor.append(edge[1] if edge.index(node) == 0 else edge[0])
+        if directed:
+            # Directed graph
+            # TODO: get neighbor
+            pass
+        else:
+            for edge in self.edges:
+                if node in edge:
+                    neighbor.append(edge[1] if edge.index(node) == 0 else edge[0])
         return neighbor
