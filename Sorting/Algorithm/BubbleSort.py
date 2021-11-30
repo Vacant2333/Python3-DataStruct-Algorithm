@@ -1,7 +1,7 @@
 class BubbleSort:
-    def run(self, ar: list) -> list:
+    def run(self, ar: list[int]) -> list[int]:
         arr = ar[:]
-        # End flag
+        # End flag,it will return if no action in 1 loop
         flag = True
         while flag:
             flag = False
@@ -9,8 +9,6 @@ class BubbleSort:
                 if index != len(arr) - 1 and arr[index + 1] < arr[index]:
                     # If the next item smaller than now,exchange them
                     arr[index], arr[index + 1] = arr[index + 1], arr[index]
-                    # May more actions,thereby continue
+                    # May more actions,continue
                     flag = True
         return arr
-
-
