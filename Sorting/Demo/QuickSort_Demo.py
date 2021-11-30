@@ -1,4 +1,4 @@
-from Algorithm.QuickSort import QuickSortLomuto
+from Sorting.Algorithm.QuickSort import QuickSortLomuto
 
 arr = [1, 99, 43, 26, 84, 29, 10, 24, 10, 23, 55]
 

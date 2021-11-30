@@ -6,7 +6,8 @@
     Algorithm:
         SelectionSort
         QuickSort
-        BubbleSort ~~
+        BubbleSort
+        InsertSort ~~
     DataStruct:
         SingleLinkedList
         Queue ~~

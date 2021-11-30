@@ -1,6 +1,6 @@
-from DataStruct import SingleLinkedList
+from Sorting.DataStruct.SingleLinkedList import SingleLinkedList
 
-sll = SingleLinkedList.SingleLinkedList()
+sll = SingleLinkedList()
 
 # Check SingleLinkedList methods
 sll.add_bottom(1)

@@ -1,4 +1,4 @@
-from Algorithm.SelectionSort import SelectionSort1, SelectionSort2
+from Sorting.Algorithm.SelectionSort import SelectionSort1, SelectionSort2
 
 arr = [121, 15, 42, 17, 19, 122, 55, 30, 12, 55, 21]
 
