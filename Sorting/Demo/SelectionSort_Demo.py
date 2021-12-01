@@ -1,6 +1,6 @@
 from Sorting.Algorithm.SelectionSort import SelectionSort1, SelectionSort2
 
-arr = [121, 15, 42, 17, 19, 122, 55, 30, 12, 55, 21]
+arr = [1, 99, 43, 26, 84, 29, 10, 24, 10, 23, 55, -2, -90, 0, 95, 28, 82, 6, 4, 12, 9]
 
 ss1_result = SelectionSort1().run(arr)
 ss2_result = SelectionSort2().run(arr)
