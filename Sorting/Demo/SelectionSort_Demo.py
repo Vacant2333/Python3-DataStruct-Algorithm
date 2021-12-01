@@ -9,4 +9,5 @@ ss2_result = SelectionSort2().run(arr)
 print("SS2 result:{}".format(ss2_result))
 
 sorted_result = sorted(arr)
-print("Sorted result:{}".format(sorted_result))
+print("Check result:{}, {}".format(ss1_result == sorted_result, ss2_result == sorted_result))
+

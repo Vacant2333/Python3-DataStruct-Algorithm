@@ -6,4 +6,4 @@ quick_sort_result = QuickSortLomuto().run(arr)
 print("QuickSort result:{}".format(quick_sort_result))
 
 sorted_result = sorted(arr)
-print("Sorted result:{}".format(sorted_result))
+print("Check result:{}".format(quick_sort_result == sorted_result))
