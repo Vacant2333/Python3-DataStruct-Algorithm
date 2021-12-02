@@ -12,7 +12,7 @@ class QuickSortLomuto:
                 left.append(value)
         return {'left': left, 'pivot': pivot, 'right': right}
 
-        # QuickSort(Lomuto version)
+    # QuickSort(Lomuto version)
     def run(self, in_list: list[int]) -> list[int]:
         if len(in_list) <= 1:
             return in_list

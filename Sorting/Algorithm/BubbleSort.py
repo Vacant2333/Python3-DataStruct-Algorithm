@@ -18,6 +18,7 @@ class BubbleSort1:
 class BubbleSort2:
     def run(self, ar: list[int]) -> list[int]:
         arr = ar[:]
+        # End flag, it will return if no action in 1 loop
         flag = True
         for now_round in range(1, len(arr)):
             if flag == False:
