@@ -7,7 +7,8 @@
         SelectionSort
         QuickSort
         BubbleSort
-        InsertSort ~~
+        InsertSort
+        ShellSort ~~
     DataStruct:
         SingleLinkedList
         Queue ~~
