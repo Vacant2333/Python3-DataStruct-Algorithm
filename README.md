@@ -11,7 +11,7 @@
         ShellSort ~~
     DataStruct:
         SingleLinkedList
-        Stack ~~
+        Stack
         Queue ~~
 </pre>
 
