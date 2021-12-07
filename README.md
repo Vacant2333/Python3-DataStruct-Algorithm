@@ -12,7 +12,7 @@
     DataStruct:
         SingleLinkedList
         Stack
-        Queue ~~
+        Queue
 </pre>
 
 <pre>
