@@ -3,25 +3,27 @@
 
 <pre>
 <b>Sorting:</b>
-    Algorithm:
-        SelectionSort
-        QuickSort
-        BubbleSort
-        InsertSort
-        ShellSort ~~
-    DataStruct:
-        SingleLinkedList
-        Stack
-        Queue
+    SelectionSort
+    QuickSort
+    BubbleSort
+    InsertSort
+    ShellSort ~~
 </pre>
 
 <pre>
 <b>Graph:</b>
-    Algorithm:
-        BreadthFirstSearch (For UndirectedGraph)
-        DepthFirstSearch (For UndirectedGraph)
-        Dijkstra (For UndirectedWeightedGraph) ~~
-    DataStruct:
+    BreadthFirstSearch (For UndirectedGraph)
+    DepthFirstSearch (For UndirectedGraph)
+    Dijkstra (For UndirectedWeightedGraph) ~~
+</pre>
+
+<pre>
+<b>DataStruct:</b>
+    SingleLinkedList
+    Stack
+    Queue
+
+    Graph:
         UndirectedGraph
         UndirectedWeightedGraph ~~
 </pre>

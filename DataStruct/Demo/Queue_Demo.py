@@ -1,4 +1,4 @@
-from Sorting.DataStruct.Queue import Queue
+from DataStruct.Queue import Queue
 
 queue = Queue()
 

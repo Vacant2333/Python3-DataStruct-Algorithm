@@ -1,5 +1,5 @@
 from Graph.Algorithm.DepthFirstSearch import DepthFirstSearch
-from Graph.DataStruct.UndirectedGraph import UndirectedGraph
+from DataStruct.Graph.UndirectedGraph import UndirectedGraph
 
 graph = UndirectedGraph()
 

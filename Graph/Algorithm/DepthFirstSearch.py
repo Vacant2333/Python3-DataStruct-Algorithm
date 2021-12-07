@@ -1,4 +1,4 @@
-from Graph.DataStruct.UndirectedGraph import UndirectedGraph
+from DataStruct.Graph.UndirectedGraph import UndirectedGraph
 
 
 class DepthFirstSearch:

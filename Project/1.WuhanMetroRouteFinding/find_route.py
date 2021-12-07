@@ -1,4 +1,4 @@
-from Graph.DataStruct.UndirectedGraph import UndirectedGraph
+from DataStruct.Graph.UndirectedGraph import UndirectedGraph
 from Graph.Algorithm.BreadthFirstSearch import BreadthFirstSearch2
 import line_data_spider
 

@@ -1,4 +1,4 @@
-from Graph.DataStruct.UndirectedGraph import UndirectedGraph
+from DataStruct.Graph.UndirectedGraph import UndirectedGraph
 
 
 # Version 1,mere search the route if can arrive the end node

@@ -1,4 +1,4 @@
-from Sorting.DataStruct.SingleLinkedList import SingleLinkedList
+from DataStruct.SingleLinkedList import SingleLinkedList
 
 sll = SingleLinkedList()
 

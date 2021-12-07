@@ -1,5 +1,5 @@
 from Graph.Algorithm.BreadthFirstSearch import BreadthFirstSearch1, BreadthFirstSearch2
-from Graph.DataStruct.UndirectedGraph import UndirectedGraph
+from DataStruct.Graph.UndirectedGraph import UndirectedGraph
 
 graph = UndirectedGraph()
 

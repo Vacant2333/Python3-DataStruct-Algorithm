@@ -1,4 +1,4 @@
-from Sorting.DataStruct.Stack import Stack
+from DataStruct.Stack import Stack
 stack = Stack()
 
 stack.push(1)

@@ -1,4 +1,4 @@
-from Graph.DataStruct.GraphBase import GraphBase
+from DataStruct.Graph.GraphBase import GraphBase
 
 
 class UndirectedGraph(GraphBase):
