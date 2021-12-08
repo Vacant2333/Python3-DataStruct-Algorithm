@@ -2,13 +2,13 @@ from DataStruct.Queue import Queue
 
 queue = Queue()
 
-queue.put(1)
-queue.put(2)
-queue.put(3)
+queue.enqueue(1)
+queue.enqueue(2)
+queue.enqueue(3)
 print("Values: {}".format(queue.values()))
-print("Pop: {}".format(queue.get()))
-queue.put(4)
-print("Get top:{}".format(queue.get_top()))
+print("Pop: {}".format(queue.dequeue()))
+queue.enqueue(4)
+print("Get top:{}".format(queue.top()))
 
 print(queue.get_length())
 print(queue.values())
