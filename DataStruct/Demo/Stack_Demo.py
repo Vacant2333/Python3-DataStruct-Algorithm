@@ -7,7 +7,7 @@ stack.push(3)
 print("Values: {}".format(stack.values()))
 print("Pop: {}".format(stack.pop()))
 stack.push(4)
-print("Get top:{}".format(stack.get_top()))
+print("Get top:{}".format(stack.top()))
 
 print(stack.get_length())
 print(stack.values())

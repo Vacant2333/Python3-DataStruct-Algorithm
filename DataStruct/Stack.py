@@ -7,7 +7,7 @@ class Stack:
     def is_empty(self):
         return True if self.stack == [] else False
 
-    def get_top(self):
+    def top(self):
         return self.stack[0] if not self.is_empty() else False
 
     # Add an item to top
