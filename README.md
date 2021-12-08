@@ -30,7 +30,7 @@
 
 <pre>
 <b>Project:</b>
-    1.WuhanMetroRouteFinding
+    WuhanMetroRouteFinding
 </pre>
 
 
